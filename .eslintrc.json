@@ -14,9 +14,10 @@
         "sourceType": "module"
     },
     "rules": {
+        "consistent-return": "error",
         // "import/no-duplicates": "error",
         // "import/no-unresolved": "error",
-        "no-unused-vars":"warn",
+        "no-unused-vars":"error",
         "no-console":"off",
         "func-names":"off",
         "no-process-exit":"off",

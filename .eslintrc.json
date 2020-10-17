@@ -6,14 +6,16 @@
         "node": true,
         "mocha":true
     },
-    "extends": ["prettier", "plugin:node/recommended"],
-    "plugins": ["prettier"],
+    "extends": ["plugin:@typescript-eslint/recommended"],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
     "parserOptions": {
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
     "rules": {
-        "prettier/prettier": "error",
+        // "import/no-duplicates": "error",
+        // "import/no-unresolved": "error",
         "no-unused-vars":"warn",
         "no-console":"off",
         "func-names":"off",

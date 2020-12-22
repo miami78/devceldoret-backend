@@ -26,7 +26,7 @@ export async function createLocation(
 ) {
   try {
     const locationRepository = getRepository(Location);
-    let newLocation = await locationRepository.save({...req.body});
+    const newLocation = await locationRepository.save({...req.body});
     if (newLocation) {
       prompt.successWithPayload(res, 201, "Created", newLocation);
     }

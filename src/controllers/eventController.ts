@@ -58,7 +58,7 @@ export async function createEvent(
 ) {
   try {
     const eventsRepository = getRepository(Event);
-    let newEvent = await eventsRepository.save({ ...req.body });
+    const newEvent = await eventsRepository.save({ ...req.body });
     if (newEvent) {
       prompt.successWithPayload(res, 201, "Created", newEvent);
     }

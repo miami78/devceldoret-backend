@@ -21,7 +21,7 @@ export async function createRole(
   next: NextFunction
 ) {
   try {
-    let newRole = await getRepository(Role).save({ ...req.body });
+    const newRole = await getRepository(Role).save({ ...req.body });
     if (newRole) {
       res.status(201).send({ status: 201, message: "Created", role: newRole });
     }

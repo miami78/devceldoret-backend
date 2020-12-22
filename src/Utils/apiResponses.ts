@@ -1,7 +1,7 @@
 import { Response } from "express";
 
 class Responses {
-  successMessage(response: Response, statusCode: number, message: String) {
+  successMessage(response: Response, statusCode: number, message: string) {
     try {
       return response
         .status(statusCode)
@@ -15,8 +15,8 @@ class Responses {
   successWithPayload(
     response: Response,
     statusCode: number,
-    message: String,
-    payload: Object
+    message: string,
+    payload: unknown
   ) {
     try {
       return response
@@ -24,7 +24,7 @@ class Responses {
         .send({ status: statusCode, message: message, data: payload });
     } catch (error) {}
   }
-  errorMessage(response: Response, statusCode: number, message: String) {
+  errorMessage(response: Response, statusCode: number, message: string) {
     try {
       return response
         .status(statusCode)
